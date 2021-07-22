@@ -1,0 +1,13 @@
+Explanation of the excel file:
+-m1, m2 and m3 each have marker intensity values ranging from 0-1 with 0 being low expression and 1 being high expression
+-markers can be co-expressed which is associated with a value of 1 or not co-expressed associated with a value of 0. Because marker co-expression is used to calculate total spillover issues basically spillover is neglected if there's no co-expression but heavily impacts the score if there is indeed co-expression. We could include a maybe in the matrix by for example giving that 0.5 in that formula.
+-f1, f2, and f3 have fluorochrome intensity values like marker expression
+-spillover is f1f2, f1f3 etc and also with values ranging from 0-1 with 0 being no spillover and 1 being extreme spillover
+
+Then some 'new' concepts:
+-The total strenght or separation power of each fluorochrome to marker combination is calculated by multiplying the marker expression to fluorochrome intensity. Again the result of this calculation will be a value from 0-1 with 0 being poor signal strenght and 1 high signal strenght.
+-This signal strenght should be paired with spillover issues but only in the case of co-expression as discussed. Therefore I calculated the 'total spillover issue' by multiplying these values again. This is one of the 2 final numbers used in the score.
+-The other final number is the delta between the signal stenghts of 2 fluorochrome to marker combinations. I introduced this to make the score prefer combinations that are equal in total intensity. 
+-Finally the lowest total score should result in the most optimal panel because this has the most equal signal strenghts and least total spreading issues. In the excel there are 4 possible panels for which I calculated the total score and I predicted panel 3 and 4 to do well. As you can see these have substantially lower scores than 2 random panel designs.
+
+Especially about this latter part of the score I'm not 100% sure whether this is the best solution but the only way to test that is to have a tool that can run larger panels because it's a huge amount of manual labor to attempt this for example for a 15 color panel. Again I'd love to hear what you think! And if this all makes no sense to you I'm more than happy to have a short meeting to discuss (again ;p)
