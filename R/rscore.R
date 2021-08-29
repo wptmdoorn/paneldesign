@@ -27,9 +27,9 @@ rscore = function(mA, mB,
                   SAB, SBA,
                   mAB) {
   
-    delta = abs(mA*fA - mB*fB)
-    spread = 2
-    total = 3
+  delta = abs(mA*fA - mB*fB)
+  spread = (mA*fA*SAB + mB*fB*SBA)*mAB
+  total = spread + delta
 }
 
 s1 = rscore(m1,m2,f1,f2,f1f2,f2f1,m1m2)
