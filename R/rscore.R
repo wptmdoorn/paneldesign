@@ -34,3 +34,4 @@ rscore = function(mA, mB,
 
 s1 = rscore(m1,m2,f1,f2,f1f2,f2f1,m1m2)
 
+rscore(m[])

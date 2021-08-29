@@ -5,7 +5,7 @@ generate_names <- function(a_letter, a_number){
 return(paste0(a_letter, seq(1:a_number)))
 }
 
-num = 7
+num = 8
 marker_names <- generate_names("m", num)
 filter_names <- generate_names("f", num)
 
