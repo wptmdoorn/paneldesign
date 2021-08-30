@@ -59,5 +59,12 @@ for ( i in 1:nrow(mf_combs)){
   score_list[i] <- calculate_score(mf_combs[i, ])
 }
 
-result <- data.frame(mf_combs, score_list)
+score_result <- data.frame(mf_combs, score_list)
+
+num=3
+file_name <- paste0("scores_output","_",num,".tsv")
+
+write.table(score_result, file= file.path("output", file_name) , 
+            sep="\t", 
+            row.names = FALSE)
 
